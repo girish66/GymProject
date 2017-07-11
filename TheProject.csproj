@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84092F3D-E966-45F2-9D6B-B0AEDBE1A0B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheProject</RootNamespace>
+    <AssemblyName>TheProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DynamicDotNetTWAIN">
+      <HintPath>..\..\..\..\..\..\Program Files\Dynamsoft\Dynamic .NET TWAIN 3.0 Trial\DynamicDotNetTWAIN.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebCam_Capture, Version=1.0.2395.24959, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="about.Designer.cs">
+      <DependentUpon>about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Access.cs" />
+    <Compile Include="Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add.designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addelete.designer.cs">
+      <DependentUpon>Addelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPerson.cs" />
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course.designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="editmem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editmem.Designer.cs">
+      <DependentUpon>editmem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formcm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formcm.Designer.cs">
+      <DependentUpon>Formcm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Shifts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shifts.designer.cs">
+      <DependentUpon>Shifts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeTable.Designer.cs">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageDataBaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageDataBaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PList.designer.cs">
+      <DependentUpon>PList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase.designer.cs">
+      <DependentUpon>purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop.designer.cs">
+      <DependentUpon>Shop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="identify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="identify.designer.cs">
+      <DependentUpon>identify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="identify2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="identify2.Designer.cs">
+      <DependentUpon>identify2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="instructors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="instructors.Designer.cs">
+      <DependentUpon>instructors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistics.designer.cs">
+      <DependentUpon>Logistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainmenu.Designer.cs">
+      <DependentUpon>mainmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckId.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckId.Designer.cs">
+      <DependentUpon>CheckId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs" />
+    <Compile Include="members.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="members.Designer.cs">
+      <DependentUpon>members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="memlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memlist.Designer.cs">
+      <DependentUpon>memlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="men.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="men.designer.cs">
+      <DependentUpon>men.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedual.designer.cs">
+      <DependentUpon>Schedual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchedualW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchedualW.designer.cs">
+      <DependentUpon>SchedualW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingelUser.cs" />
+    <Compile Include="State1.cs" />
+    <Compile Include="State2.cs" />
+    <Compile Include="State3.cs" />
+    <Compile Include="WebCam.cs" />
+    <Compile Include="women.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="women.designer.cs">
+      <DependentUpon>women.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Worker.cs" />
+    <EmbeddedResource Include="about.resx">
+      <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addelete.resx">
+      <DependentUpon>Addelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course.resx">
+      <DependentUpon>Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editmem.resx">
+      <DependentUpon>editmem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formcm.resx">
+      <DependentUpon>Formcm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PList.resx">
+      <DependentUpon>PList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchase.resx">
+      <DependentUpon>purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shifts.resx">
+      <DependentUpon>Shifts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop.resx">
+      <DependentUpon>Shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="identify.resx">
+      <DependentUpon>identify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="identify2.resx">
+      <DependentUpon>identify2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="instructors.resx">
+      <DependentUpon>instructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistics.resx">
+      <DependentUpon>Logistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainmenu.resx">
+      <DependentUpon>mainmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckId.resx">
+      <DependentUpon>CheckId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="members.resx">
+      <DependentUpon>members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memlist.resx">
+      <DependentUpon>memlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="men.resx">
+      <DependentUpon>men.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Schedual.resx">
+      <DependentUpon>Schedual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchedualW.resx">
+      <DependentUpon>SchedualW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeTable.resx">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="women.resx">
+      <DependentUpon>women.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ImageDataBaseDataSet.xsc">
+      <DependentUpon>ImageDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ImageDataBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ImageDataBaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ImageDataBaseDataSet.xss">
+      <DependentUpon>ImageDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
